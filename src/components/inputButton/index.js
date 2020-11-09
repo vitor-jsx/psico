@@ -5,7 +5,7 @@ const IputButton = (props) => {
     const styles = StyleSheet.create({
         button:{
             backgroundColor:props.backgroundColor ? props.backgroundColor : '#3B3941',
-            height:40,
+            height:50,
             borderRadius:5,
             marginTop:15,
             justifyContent:'center',

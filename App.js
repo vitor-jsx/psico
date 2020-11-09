@@ -16,7 +16,7 @@ import {
   StatusBar,
 } from 'react-native';
 
-import Home from './src/pages/index'
+import Home from './src/router/index'
 
 const App: () => React$Node = () => {
   return (

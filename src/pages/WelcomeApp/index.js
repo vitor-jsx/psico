@@ -1,30 +1,29 @@
 import React from 'react';
-
 import {View, Text,Image, StyleSheet, TouchableOpacity} from 'react-native';
 
-import Imagen from '../assets/imagens/undraw_online_messaging_9ro6.png';
-import Button from '../components/inputButton/index '
+import Imagen from '../../assets/imagens/undraw_online_messaging_9ro6.png';
+import Button from '../../components/inputButton/index';
 
-
-const Home = () => {
+const Home = ({navigation}) => {
   return (
     <View style={styles.background}>
+    
         <View style={styles.bodyView}>
             <View>
-                <Image style={styles.imagemHome}  source={`${Imagen}`} />
+                <Image style={styles.imagemHome}  source={`${Imagen}`}  />
             </View>
             <View style={styles.viewText}>
                 <Text style={styles.title}> 
                     Seja muito bem-vindo
                 </Text>
                 <Text style={styles.description}> 
-                    Este aplicativo promete de oferecer apoio psicologico de voluntarios, seja bem vindo e espeamos te auxiliar sempre da mesma forma
+                    Este aplicativo promete de oferecer apoio psicologico de voluntarios, seja bem vindo e esperamos te auxiliar sempre da mesma forma
                 </Text>
             </View>
         </View>
         <View style={styles.buttonView}>
-                <Button mensagem='Login' backgroundColor='#6C63FF' />
-                <Button mensagem='Cadastre-se' />
+                <Button mensagem='Login' backgroundColor='#6C63FF' pressFunction={() => navigation.navigate('Login')} />
+                <Button mensagem='Continuar' pressFunction={()=>navigation.navigate('RegisterTypeUser', {})} />
         </View>
 
     </View>
