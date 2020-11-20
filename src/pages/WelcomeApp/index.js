@@ -23,7 +23,7 @@ const Home = ({navigation}) => {
         </View>
         <View style={styles.buttonView}>
                 <Button mensagem='Login' backgroundColor='#6C63FF' pressFunction={() => navigation.navigate('Login')} />
-                <Button mensagem='Continuar' pressFunction={()=>navigation.navigate('RegisterTypeUser', {})} />
+                <Button mensagem='Cadastrar' pressFunction={()=>navigation.navigate('RegisterTypeUser', {})} />
         </View>
 
     </View>

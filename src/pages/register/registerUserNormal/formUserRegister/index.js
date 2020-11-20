@@ -1,11 +1,11 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import {View, Text,Image, StyleSheet, TouchableOpacity, TextInput,KeyboardAvoidingView,Keyboard, ScrollView} from 'react-native';
 
-import Input from '../../../components/inputText';
-import Return from '../../../components/return';
-import Button from '../../../components/inputButton'
+import Input from '../../../../components/inputText';
+import Return from '../../../../components/return';
+import Button from '../../../../components/inputButton'
 
-const RegisterUserNormal = ({navigation, route}) =>{
+const FormUserRegister = () =>{
     const styles = StyleSheet.create({
         background:{
             backgroundColor:'#211F28',
@@ -46,11 +46,6 @@ const RegisterUserNormal = ({navigation, route}) =>{
             marginTop:20
         }
     })
-
-    const {userData} = route.params;
-    useEffect(()=>{
-        console.log(userData)
-    },[])
  
     return(
     <TouchableOpacity style={styles.background} activeOpacity={1}  onPress={Keyboard.dismiss} >
@@ -90,7 +85,7 @@ const RegisterUserNormal = ({navigation, route}) =>{
                     </View>
 
                     <View style={styles.buttonView} >
-                        <Button mensagem='Continuar' backgroundColor='#6C63FF'  pressFunction={()=>navigation.navigate('RegisterUserVoluntary', {})}/>
+                        <Button mensagem='Continuar' backgroundColor='#6C63FF'/>
                     </View>
                 </KeyboardAvoidingView>
             </View>
@@ -99,4 +94,4 @@ const RegisterUserNormal = ({navigation, route}) =>{
  )
 }
 
-export default RegisterUserNormal
+export default FormUserRegister

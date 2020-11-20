@@ -6,7 +6,10 @@ import Home from '../pages/WelcomeApp/index';
 import Login from '../pages/login/index';
 
 import RegisterTypeUser from '../pages/register'
+
 import RegisterUserNormal from '../pages/register/registerUserNormal'
+import FormUserRegister from '../pages/register/registerUserNormal/formUserRegister/index'
+
 import RegisterUserVoluntary from '../pages/register/registerUserVoluntary'
 
 const Stack = createStackNavigator();
@@ -19,7 +22,11 @@ const Index = () => {
         <Stack.Screen name="Login" component={Login} options={{ headerShown: false }} />
 
         <Stack.Screen name="RegisterTypeUser" component={RegisterTypeUser} options={{ headerShown: false }} />
+  
         <Stack.Screen name="RegisterUserNormal" component={RegisterUserNormal} options={{ headerShown: false }} />
+        <Stack.Screen name="FormUserRegister" component={FormUserRegister} options={{ headerShown: false }} />
+     
+        
         <Stack.Screen name="RegisterUserVoluntary" component={RegisterUserVoluntary} options={{ headerShown: false }} />
 
       </Stack.Navigator>
